@@ -5,14 +5,17 @@ module.exports = (grunt) ->
       compile:
         files:
           'src/js/module.js': 'src/module.coffee'
-          'test/js/module.js': 'test/module.coffee'
+          'src/js/fullpage.js': 'src/fullpage.coffee'
+          'test/js/fullpage.js': 'test/fullpage.coffee'
+          'src/js/no_overflow.js': 'src/no_overflow.coffee'
+          'test/js/no_overflow.js': 'test/no_overflow.coffee'
     concat:
       options:
         banner: '/* <%= pkg.name %> - v<%= pkg.version %> - ' +
           '<%= grunt.template.today("yyyy-mm-dd") %> */\n'
         separator: '\n'
       dist:
-        src: ['src/js/module.js']
+        src: ['src/js/module.js', 'src/js/fullpage.js', 'src/js/no_overflow.js']
         dest: 'bin/<%= pkg.name %>.js'
     uglify:
       options:

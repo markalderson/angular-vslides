@@ -22,6 +22,7 @@
   "homepage": "https://github.com/markalderson/angular-vslides#readme",
   "devDependencies": {
     "angular": "^1.4.7",
+    "angular-mocks": "^1.4.7",
     "grunt": "^0.4.5",
     "grunt-contrib-coffee": "^0.13.0",
     "grunt-contrib-concat": "^0.5.1",

@@ -1,1 +1,1 @@
-console.log 'Yo'
+angular.module 'msl.vslides', []
