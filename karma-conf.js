@@ -9,9 +9,11 @@ module.exports = function(config) {
       'src/js/fullpage.js',
       'src/js/no_overflow.js',
       'src/js/scroll_detector.js',
+      'src/js/arrows_detector.js',
       'test/js/fullpage.js',
       'test/js/no_overflow.js',
-      'test/js/scroll_detector.js'
+      'test/js/scroll_detector.js',
+      'test/js/arrows_detector.js'
     ],
     reporters: ['progress'],
     port: 9876,

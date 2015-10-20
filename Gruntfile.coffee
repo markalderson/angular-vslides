@@ -11,6 +11,8 @@ module.exports = (grunt) ->
           'test/js/no_overflow.js': 'test/no_overflow.coffee'
           'src/js/scroll_detector.js': 'src/scroll_detector.coffee'
           'test/js/scroll_detector.js': 'test/scroll_detector.coffee'
+          'src/js/arrows_detector.js': 'src/arrows_detector.coffee'
+          'test/js/arrows_detector.js': 'test/arrows_detector.coffee'
     concat:
       options:
         banner: '/* <%= pkg.name %> - v<%= pkg.version %> - ' +
@@ -18,8 +20,9 @@ module.exports = (grunt) ->
         separator: '\n'
       dist:
         src: [
-          'src/js/module.js', 'src/js/fullpage.js',
+          'src/js/module.js', 'src/js/fullpage.js'
           'src/js/no_overflow.js', 'src/js/scroll_detector.js'
+          'src/js/arrows_detector.js'
         ]
         dest: 'bin/<%= pkg.name %>.js'
     uglify:
