@@ -25,6 +25,7 @@ describe 'Service "scroll_detector"', ->
     expect(a_spy).toHaveBeenCalled()
     scroll_detector.detach()
     a_div.remove()
+    $window.scroll 0, 0
   it 'detects scroll up', ->
     body = angular.element $document.prop 'body'
     a_div = $compile('<div></div>')($rootScope)
@@ -40,6 +41,7 @@ describe 'Service "scroll_detector"', ->
     expect(a_spy).toHaveBeenCalled()
     scroll_detector.detach()
     a_div.remove()
+    $window.scroll 0, 0
   it 'allows you to disable it anytime', ->
     body = angular.element $document.prop 'body'
     a_div = $compile('<div></div>')($rootScope)
@@ -53,3 +55,4 @@ describe 'Service "scroll_detector"', ->
     angular.element($window).triggerHandler 'scroll'
     expect(a_spy).not.toHaveBeenCalled()
     a_div.remove()
+    $window.scroll 0, 0

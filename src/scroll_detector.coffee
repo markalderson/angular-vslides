@@ -3,7 +3,7 @@ angular.module('msl.vslides').factory 'scroll_detector', ['$window',
   currentScroll = ->
     doc = $document.prop('documentElement')
     ($window.pageYOffset or doc.scrollTop) - (doc.clientTop or 0)
-  start_scroll = currentScroll()
+  start_scroll = null
   scroll_handler = null
   scrollHandler = (scope) ->
     ->
@@ -12,6 +12,7 @@ angular.module('msl.vslides').factory 'scroll_detector', ['$window',
       start_scroll = currentScroll()
   return {
     attach: (scope) ->
+      start_scroll = currentScroll()
       scroll_handler = scrollHandler scope
       angular.element($window).on 'scroll', scroll_handler
     detach: () ->
