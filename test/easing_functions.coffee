@@ -16,3 +16,5 @@ describe 'Service "easing_functions"', ->
     expect(l 100, 200, 0.8).toEqual 180
     expect(l 100, 200, 0.9).toEqual 190
     expect(l 100, 200, 1).toEqual 200
+    expect(l 100, 200, -0.1).toEqual 100
+    expect(l 100, 200, 1.1).toEqual 200
