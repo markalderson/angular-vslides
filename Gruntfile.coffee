@@ -15,6 +15,10 @@ module.exports = (grunt) ->
           'test/js/scroll_detector.js': 'test/scroll_detector.coffee'
           'src/js/arrows_detector.js': 'src/arrows_detector.coffee'
           'test/js/arrows_detector.js': 'test/arrows_detector.coffee'
+          'src/js/easing_functions.js': 'src/easing_functions.coffee'
+          'test/js/easing_functions.js': 'test/easing_functions.coffee'
+          'src/js/animated_scroller.js': 'src/animated_scroller.coffee'
+          'test/js/animated_scroller.js': 'test/animated_scroller.coffee'
     concat:
       options:
         banner: '/* <%= pkg.name %> - v<%= pkg.version %> - ' +
@@ -25,6 +29,7 @@ module.exports = (grunt) ->
           'src/js/module.js', 'src/js/fullpage.js'
           'src/js/no_overflow.js', 'src/js/scroll_position.js'
           'src/js/scroll_detector.js', 'src/js/arrows_detector.js'
+          'src/js/easing_functions.js', 'src/js/animated_scroller.js'
         ]
         dest: 'bin/<%= pkg.name %>.js'
     uglify:

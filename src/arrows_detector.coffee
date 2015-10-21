@@ -1,5 +1,5 @@
 angular.module('msl.vslides').factory 'arrows_detector', ['$window',
-'$document', ($window, $document) ->
+($window) ->
   arrows_handler = null
   arrowsHandler = (scope) ->
     (event) ->

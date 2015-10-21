@@ -11,11 +11,15 @@ module.exports = function(config) {
       'src/js/scroll_position.js',
       'src/js/scroll_detector.js',
       'src/js/arrows_detector.js',
+      'src/js/easing_functions.js',
+      'src/js/animated_scroller.js',
       'test/js/fullpage.js',
       'test/js/no_overflow.js',
       'test/js/scroll_position.js',
       'test/js/scroll_detector.js',
-      'test/js/arrows_detector.js'
+      'test/js/arrows_detector.js',
+      'test/js/easing_functions.js',
+      'test/js/animated_scroller.js'
     ],
     reporters: ['progress'],
     port: 9876,
