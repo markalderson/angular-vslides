@@ -8,10 +8,12 @@ module.exports = function(config) {
       'src/js/module.js',
       'src/js/fullpage.js',
       'src/js/no_overflow.js',
+      'src/js/scroll_position.js',
       'src/js/scroll_detector.js',
       'src/js/arrows_detector.js',
       'test/js/fullpage.js',
       'test/js/no_overflow.js',
+      'test/js/scroll_position.js',
       'test/js/scroll_detector.js',
       'test/js/arrows_detector.js'
     ],

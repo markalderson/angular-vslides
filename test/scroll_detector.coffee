@@ -7,11 +7,11 @@ describe 'Service "scroll_detector"', ->
   beforeEach module 'msl.vslides'
   beforeEach inject (_scroll_detector_) ->
     scroll_detector = _scroll_detector_
-  beforeEach inject (_$compile_, _$rootScope_, _$window_, _$document_) ->
+  beforeEach inject (_$compile_, _$rootScope_, _$document_, _$window_) ->
     $compile = _$compile_
     $rootScope = _$rootScope_
-    $window = _$window_
     $document = _$document_
+    $window = _$window_
   it 'detects scroll down', ->
     body = angular.element $document.prop 'body'
     a_div = $compile('<div></div>')($rootScope)

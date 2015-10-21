@@ -1,18 +1,15 @@
-angular.module('msl.vslides').factory 'scroll_detector', ['$window',
-'$document', ($window, $document) ->
-  currentScroll = ->
-    doc = $document.prop('documentElement')
-    ($window.pageYOffset or doc.scrollTop) - (doc.clientTop or 0)
+angular.module('msl.vslides').factory 'scroll_detector', ['scroll_position',
+'$window', '$document', (scroll_position, $window, $document) ->
   start_scroll = null
   scroll_handler = null
   scrollHandler = (scope) ->
     ->
-      if currentScroll() > start_scroll then scope.$emit 'next_slide'
-      if currentScroll() < start_scroll then scope.$emit 'prev_slide'
-      start_scroll = currentScroll()
+      if scroll_position.current() > start_scroll then scope.$emit 'next_slide'
+      if scroll_position.current() < start_scroll then scope.$emit 'prev_slide'
+      start_scroll = scroll_position.current()
   return {
     attach: (scope) ->
-      start_scroll = currentScroll()
+      start_scroll = scroll_position.current()
       scroll_handler = scrollHandler scope
       angular.element($window).on 'scroll', scroll_handler
     detach: () ->

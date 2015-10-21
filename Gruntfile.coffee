@@ -9,6 +9,8 @@ module.exports = (grunt) ->
           'test/js/fullpage.js': 'test/fullpage.coffee'
           'src/js/no_overflow.js': 'src/no_overflow.coffee'
           'test/js/no_overflow.js': 'test/no_overflow.coffee'
+          'src/js/scroll_position.js': 'src/scroll_position.coffee'
+          'test/js/scroll_position.js': 'test/scroll_position.coffee'
           'src/js/scroll_detector.js': 'src/scroll_detector.coffee'
           'test/js/scroll_detector.js': 'test/scroll_detector.coffee'
           'src/js/arrows_detector.js': 'src/arrows_detector.coffee'
@@ -21,8 +23,8 @@ module.exports = (grunt) ->
       dist:
         src: [
           'src/js/module.js', 'src/js/fullpage.js'
-          'src/js/no_overflow.js', 'src/js/scroll_detector.js'
-          'src/js/arrows_detector.js'
+          'src/js/no_overflow.js', 'src/js/scroll_position.js'
+          'src/js/scroll_detector.js', 'src/js/arrows_detector.js'
         ]
         dest: 'bin/<%= pkg.name %>.js'
     uglify:
