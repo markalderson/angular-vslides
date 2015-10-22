@@ -21,6 +21,8 @@ module.exports = (grunt) ->
           'test/js/animated_scroller.js': 'test/animated_scroller.coffee'
           'src/js/slide_switcher.js': 'src/slide_switcher.coffee'
           'test/js/slide_switcher.js': 'test/slide_switcher.coffee'
+          'src/js/slide_master.js': 'src/slide_master.coffee'
+          'test/js/slide_master.js': 'test/slide_master.coffee'
     concat:
       options:
         banner: '/* <%= pkg.name %> - v<%= pkg.version %> - ' +
@@ -32,7 +34,7 @@ module.exports = (grunt) ->
           'src/js/no_overflow.js', 'src/js/scroll_position.js'
           'src/js/scroll_detector.js', 'src/js/arrows_detector.js'
           'src/js/easing_functions.js', 'src/js/animated_scroller.js'
-          'src/js/slide_switcher.js'
+          'src/js/slide_switcher.js', 'src/js/slide_master.js'
         ]
         dest: 'bin/<%= pkg.name %>.js'
     uglify:

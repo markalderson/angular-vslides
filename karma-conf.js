@@ -14,6 +14,7 @@ module.exports = function(config) {
       'src/js/easing_functions.js',
       'src/js/animated_scroller.js',
       'src/js/slide_switcher.js',
+      'src/js/slide_master.js',
       'test/js/fullpage.js',
       'test/js/no_overflow.js',
       'test/js/scroll_position.js',
@@ -21,7 +22,8 @@ module.exports = function(config) {
       'test/js/arrows_detector.js',
       'test/js/easing_functions.js',
       'test/js/animated_scroller.js',
-      'test/js/slide_switcher.js'
+      'test/js/slide_switcher.js',
+      'test/js/slide_master.js'
     ],
     reporters: ['progress'],
     port: 9876,
